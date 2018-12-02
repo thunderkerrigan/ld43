@@ -18,6 +18,12 @@ namespace Sacrifice
         }
         public override void action()
         {
+            GameObject[] objects = GameObject.FindGameObjectsWithTag("HiddenObject");
+            foreach (GameObject item in objects)
+            {
+                Revealer revealer = item.GetComponent<Revealer>();
+                revealer.ShowChildren();
+            }
             if (fadingIn == null)
             {
                 fadingIn = StartCoroutine(fadeIn());
