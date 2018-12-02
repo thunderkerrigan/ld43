@@ -18,7 +18,7 @@ public class MainMenuManager : MonoBehaviour {
 	public void startGame()
     {
         SceneManager.LoadScene("mainscene", LoadSceneMode.Single);
-        GameManager.instance.enabled = true;
+        // GameManager.instance.enabled = true;
     }
 
     public void setDifficulty(int difficultyLevel)
