@@ -63,7 +63,7 @@ namespace Sacrifice
                     GameObject sacrificeGameObject = activeSacrifices[index];
                     GameObject newButton = buttonObjectPool.GetObject();
                     newButton.transform.SetParent(storePanel.transform, false);
-                    Vector3 newPosition = newButton.transform.position + (Vector3.up/5 * index);
+                    Vector3 newPosition = newButton.transform.position + (Vector3.up*30 * index);
                     newButton.transform.SetPositionAndRotation(newPosition, Quaternion.identity);
                     SacrificeMenuButton sacrificeMenuButton = newButton.GetComponent<SacrificeMenuButton>();
                     buttons.Add(sacrificeMenuButton);
