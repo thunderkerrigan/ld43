@@ -9,37 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1842860208152886}
+  m_RootGameObject: {fileID: 1691140241948528}
   m_IsPrefabParent: 1
---- !u!1 &1824394437440142
+--- !u!1 &1691140241948528
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 224967102694291336}
-  - component: {fileID: 222141270348642938}
-  - component: {fileID: 114990805011023344}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1842860208152886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224381607115394886}
-  - component: {fileID: 222784395520944246}
-  - component: {fileID: 114953137706024780}
-  - component: {fileID: 114648175740176758}
-  - component: {fileID: 114489587159203090}
+  - component: {fileID: 224144055409430208}
+  - component: {fileID: 222916964918248242}
+  - component: {fileID: 114679740974442642}
+  - component: {fileID: 114597369013882176}
+  - component: {fileID: 114074474739052948}
   m_Layer: 5
   m_Name: SacrificialButton
   m_TagString: Untagged
@@ -47,25 +30,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114489587159203090
+--- !u!1 &1830685594530684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224305603112939484}
+  - component: {fileID: 222529419669812626}
+  - component: {fileID: 114936319422902034}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114074474739052948
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842860208152886}
+  m_GameObject: {fileID: 1691140241948528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beccf30e44db24e8290e9323c87b574d, type: 3}
+  m_Script: {fileID: 11500000, guid: f539239c357495842b078f33fe9b663e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonComponent: {fileID: 114648175740176758}
-  nameLabel: {fileID: 114990805011023344}
---- !u!114 &114648175740176758
+  buttonComponent: {fileID: 114597369013882176}
+  nameLabel: {fileID: 114936319422902034}
+--- !u!114 &114597369013882176
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842860208152886}
+  m_GameObject: {fileID: 1691140241948528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -95,18 +95,18 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114953137706024780}
+  m_TargetGraphic: {fileID: 114679740974442642}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114953137706024780
+--- !u!114 &114679740974442642
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842860208152886}
+  m_GameObject: {fileID: 1691140241948528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -128,12 +128,12 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114990805011023344
+--- !u!114 &114936319422902034
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1824394437440142}
+  m_GameObject: {fileID: 1830685594530684}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -163,29 +163,29 @@ MonoBehaviour:
   m_Text: 'ACHETER COMPETENCE
 
 '
---- !u!222 &222141270348642938
+--- !u!222 &222529419669812626
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1824394437440142}
---- !u!222 &222784395520944246
+  m_GameObject: {fileID: 1830685594530684}
+--- !u!222 &222916964918248242
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842860208152886}
---- !u!224 &224381607115394886
+  m_GameObject: {fileID: 1691140241948528}
+--- !u!224 &224144055409430208
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1842860208152886}
+  m_GameObject: {fileID: 1691140241948528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1009.73596}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
-  - {fileID: 224967102694291336}
+  - {fileID: 224305603112939484}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -194,17 +194,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.000070969545}
   m_SizeDelta: {x: 500, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224967102694291336
+--- !u!224 &224305603112939484
 RectTransform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1824394437440142}
+  m_GameObject: {fileID: 1830685594530684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 224381607115394886}
+  m_Father: {fileID: 224144055409430208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
