@@ -3,55 +3,76 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SacrificeStoreMenu : MonoBehaviour
+namespace Sacrifice
 {
-    public GameObject storePanel;
-    public SimpleObjectPool buttonObjectPool;
 
-    private List<SacrificeMenuButton> buttons = new List<SacrificeMenuButton>();
-    // private List<Power> = [];
-
-    // Use this for initialization
-    void Start()
+    public class SacrificeStoreMenu : MonoBehaviour
     {
+        public GameObject storePanel;
+        public SimpleObjectPool buttonObjectPool;
+        private List<SacrificeMenuButton> buttons = new List<SacrificeMenuButton>();
+        public List<GameObject> sacrifices = new List<GameObject>();
+        private List<GameObject> activeSacrifices = new List<GameObject>();
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-
-    public void showMenu()
-    {
-        storePanel.SetActive(true);
-int checkpoint = PlayerPrefs.GetInt("reachedCheckpoints", 1);
-createMenu(checkpoint);
-    }
-
-    public void hideMenu()
-    {
-        storePanel.SetActive(false);
-        
-
-    }
-
-    void createMenu(int checkpoint)
-    {
-        if (checkpoint > buttons.Count)
+        void Awake()
         {
-            GameObject newButton = buttonObjectPool.GetObject();
-            newButton.transform.SetParent(storePanel.transform);
-            newButton.transform.localScale = storePanel.transform.localScale;
-            newButton.transform.localPosition = new Vector3(0, 0, 0);
-           // newButton.transform.SetPositionAndRotation(new Vector3(0,0,0), Quaternion.identity);
-            Sacrifice sacrifice = new Speed();
-            SacrificeMenuButton sacrificeMenuButton = newButton.GetComponent<SacrificeMenuButton>();
-            buttons.Add(sacrificeMenuButton);
-            sacrificeMenuButton.Setup(sacrifice);
+            PlayerPrefs.SetInt("reachedCheckpoints", 0);
+
+            foreach (GameObject item in sacrifices)
+            {
+                GameObject sacrificeGameObject = GameObject.Instantiate(item);
+                activeSacrifices.Add(sacrificeGameObject);
+            }
         }
+        // Use this for initialization
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void showMenu()
+        {
+            storePanel.SetActive(true);
+            int checkpoint = PlayerPrefs.GetInt("reachedCheckpoints", 0);
+            createMenu(checkpoint);
+        }
+
+        public void hideMenu()
+        {
+            storePanel.SetActive(false);
+
+
+        }
+
+        void createMenu(int checkpoint)
+        {
+            int index = 0;
+            while (index < checkpoint)
+            {
+                SacrificeMenuButton existingButton = buttons.FindLast(button => button.item == activeSacrifices[index]);
+                if (existingButton == null)
+                {
+                    GameObject sacrificeGameObject = activeSacrifices[index];
+                    GameObject newButton = buttonObjectPool.GetObject();
+                    newButton.transform.SetParent(storePanel.transform, false);
+                    Vector3 newPosition = newButton.transform.position + (Vector3.up*30 * index);
+                    newButton.transform.SetPositionAndRotation(newPosition, Quaternion.identity);
+                    SacrificeMenuButton sacrificeMenuButton = newButton.GetComponent<SacrificeMenuButton>();
+                    buttons.Add(sacrificeMenuButton);
+                    sacrificeMenuButton.Setup(sacrificeGameObject);
+                }
+                index++;
+            }
+        }
+
+
     }
-
-
 }

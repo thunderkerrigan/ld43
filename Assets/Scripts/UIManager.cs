@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         pauseButton.gameObject.SetActive(true);
         inGameMenu.SetActive(false);
-        GameManager.instance.GameOver(false, 0);
+        // GameManager.instance.GameOver(false, 0);
     }
 
     // Update is called once per frame
