@@ -1964,19 +1964,19 @@ MonoBehaviour:
   Pause:
     key: 27
     controllerButton: 8
-    m_Enabled: 1
+    m_Enabled: 0
   Interact:
-    key: 101
+    key: 102
     controllerButton: 4
-    m_Enabled: 1
+    m_Enabled: 0
   MeleeAttack:
     key: 97
     controllerButton: 3
-    m_Enabled: 1
+    m_Enabled: 0
   RangedAttack:
-    key: 102
+    key: 101
     controllerButton: 10
-    m_Enabled: 1
+    m_Enabled: 0
   Jump:
     key: 32
     controllerButton: 1

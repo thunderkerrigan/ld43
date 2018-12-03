@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224455163969582362}
   - component: {fileID: 114807298282599804}
+  - component: {fileID: 222122308449362478}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -99,8 +100,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 4f26946c3876b7f41a15450a373c1a6c, type: 3}
-        m_MethodName: set_name
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -144,7 +145,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TANK
+  m_Text: 
 --- !u!114 &114811109129715982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,6 +173,12 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!222 &222122308449362478
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1806888389728802}
 --- !u!222 &222395713742146706
 CanvasRenderer:
   m_ObjectHideFlags: 1

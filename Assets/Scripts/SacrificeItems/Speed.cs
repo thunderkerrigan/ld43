@@ -13,7 +13,7 @@ namespace Sacrifice
 
         public override string GetsacrificeName()
         {
-            return "Tank";
+            return "Sacrify your jump for more speed";
         }
 
         public override string Getdescription()
