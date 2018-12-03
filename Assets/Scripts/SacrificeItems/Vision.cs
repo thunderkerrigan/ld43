@@ -9,7 +9,7 @@ namespace Sacrifice
         private Coroutine fadingIn;
         public override string GetsacrificeName()
         {
-            return "Sacrify your Vision and you will see hidden path";
+            return "Vision";
         }
 
         public override string Getdescription()
@@ -36,7 +36,7 @@ namespace Sacrifice
             while (intensity <= 1f)
             {
                 //first get the camera then coroutine the shaders to progressively get grayscale; same with directional light.
-                GameObject cameraGameObject = GameObject.Find("Camera");
+                GameObject cameraGameObject = GameObject.Find("MainCamera");
                 BWEffect cameraEffect = cameraGameObject.GetComponent<BWEffect>();
                 Light light = GameObject.FindWithTag("Light").GetComponent<Light>();
                 cameraEffect.intensity = intensity;

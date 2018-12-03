@@ -2,26 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Revealer : MonoBehaviour
-{
+public class Revealer : MonoBehaviour {
 
-    // Use this for initialization
-    private GameObject[] hiddenObjects;
+	// Use this for initialization
+	public List<GameObject> hiddenObject;
+	void Start () {
+		
+	}
+	
+	public void ShowChildren(){
+		foreach (GameObject item in hiddenObject)
+		{
+			item.SetActive(true);
+		}
+	}
 
-    void Awake()
-    {
-        hiddenObjects = GameObject.FindGameObjectsWithTag("HiddenObjectChildren");
-        foreach (GameObject item in hiddenObjects)
-        {
-            item.SetActive(false);
-        }
-    }
-
-    public void ShowChildren()
-    {
-        foreach (GameObject item in hiddenObjects)
-        {
-            item.SetActive(true);
-        }
-    }
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }

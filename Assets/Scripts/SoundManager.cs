@@ -41,28 +41,6 @@ class PVC : MusicStyle
         }
     }
 }
-class Defeat : MusicStyle
-{
-
-    public AudioClip audioClip
-    {
-        get
-        {
-            return Resources.Load<AudioClip>("Audio/Defeat_screen_mastered");
-        }
-    }
-}
-class Winning : MusicStyle
-{
-
-    public AudioClip audioClip
-    {
-        get
-        {
-            return Resources.Load<AudioClip>("Audio/Winning_screen_mastered");
-        }
-    }
-}
 
 public class SoundManager : MonoBehaviour
 {
@@ -73,8 +51,6 @@ public class SoundManager : MonoBehaviour
 
     public float lowPitchRange = .95f;
     public float highPitchRange = 1.05f;
-
-    private Coroutine interludeCoroutine;
 
 
     void Awake()
@@ -95,28 +71,6 @@ public class SoundManager : MonoBehaviour
     {
         musicSource.clip = style.audioClip;
         musicSource.Play();
-    }
-
-    public void playInterludeClip(MusicStyle style)
-    {
-        if (interludeCoroutine == null)
-        {
-            interludeCoroutine = StartCoroutine(interlude(style));
-        }
-
-    }
-
-    IEnumerator interlude(MusicStyle style)
-    {
-        AudioClip currentSong = musicSource.clip;
-        int pauseTimestamp = musicSource.timeSamples;
-        musicSource.clip = style.audioClip;
-        musicSource.Play();
-        yield return new WaitForSeconds(musicSource.clip.length);
-        musicSource.clip = currentSong;
-        musicSource.timeSamples = pauseTimestamp;
-        musicSource.Play();
-        interludeCoroutine = null;
     }
 
     public void PlaySingle(AudioClip clip)
