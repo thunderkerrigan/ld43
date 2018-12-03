@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 114156236943910428}
   - component: {fileID: 114895391656446070}
   m_Layer: 31
-  m_Name: Point light
+  m_Name: SacrificeStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,7 +615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2687abb83b8e13246985b61a4f3748f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool: {fileID: 0}
+  storePanel: {fileID: 0}
+  buttonObjectPool: {fileID: 0}
+  sacrifices: []
 --- !u!114 &114833466264284246
 MonoBehaviour:
   m_ObjectHideFlags: 1
